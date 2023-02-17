@@ -1,3 +1,5 @@
+# Se requiere del archivo Mount.csv
+
 function Mount-DataStore($IdLun, $StorageID) {
 
     $resolutionSpec = New-Object VMware.Vim.HostUnresolvedVmfsResignatureSpec
