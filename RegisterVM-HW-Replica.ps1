@@ -30,7 +30,7 @@ get-Datastore -name *Datastore_15_DS8886_V81* | Set-Datastore -name Datastore_15
 
 $VMs | ForEach-Object {
    
-    New-VM -name $_.Name -VMFilePath $_.Path -Location "Replica-TEST" -RunAsync -ResourcePool "ITX-MED-CLUSTER1" -Confirm:$false
+    New-VM -name $_.Name -VMFilePath $_.Path -Location "Replica HW" -RunAsync -ResourcePool "ITX-MED-CLUSTER1" -Confirm:$false
     Start-Sleep -Seconds 2
     Get-CDDrive -VM $_.Name | Remove-CDDrive -Confirm:$false
     $NetAdapters = Get-NetworkAdapter -VM $_.Name
