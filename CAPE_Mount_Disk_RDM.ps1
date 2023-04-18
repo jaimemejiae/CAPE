@@ -1,4 +1,5 @@
-﻿function Set-MultiwriterDeviceNode ($vmToUpdate, $HDNameUpdate, $DeviceNodeUpdate){		
+﻿# Requiere Nodo#-#.csv o Allnode.csv
+function Set-MultiwriterDeviceNode ($vmToUpdate, $HDNameUpdate, $DeviceNodeUpdate){		
 	$VM = Get-VM $vmToUpdate | Select-Object Id
 	$VM = Get-View -Id $vm.id
 	$hdskToChange = Get-HardDisk -VM $vmToUpdate -Name $HDNameUpdate
@@ -18,7 +19,7 @@
 	
 	Connect-VIServer 172.18.40.30
 	Get-Cluster -Name ITX-MED-CLUSTER1 | Get-VMHost | Get-VMHostStorage -RescanAllHba
-	$VMs= Import-CSV D:\Nodo9-10.csv
+	$VMs= Import-CSV .\NodoAD-AE.csv
 	$VMs|ForEach-Object {
 	$HDname = $_.HDName
 	New-HardDisk -VM $_.Name -DiskType RawPhysical -DeviceName $_.LUN -Controller $_.SCSIController

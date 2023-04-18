@@ -1,0 +1,10 @@
+﻿Name,LUN,SCSIController,HDName,DeviceNode,Nodo2,HDNameNodo2
+BOGPVBDWP0AD,/vmfs/devices/disks/naa.6005076309ffd4bd0000000000000120,SCSI controller 1,Hard disk 3,0,BOGPVBDWP0AE,Hard disk 3
+BOGPVBDWP0AD,/vmfs/devices/disks/naa.6005076309ffd4bd0000000000000121,SCSI controller 1,Hard disk 4,1,BOGPVBDWP0AE,Hard disk 4
+BOGPVBDWP0AD,/vmfs/devices/disks/naa.6005076309ffd4bd000000000000011f,SCSI controller 1,Hard disk 5,2,BOGPVBDWP0AE,Hard disk 5
+BOGPVBDWP0AD,/vmfs/devices/disks/naa.6005076309ffd4bd0000000000000101,SCSI controller 1,Hard disk 6,3,BOGPVBDWP0AE,Hard disk 6
+BOGPVBDWP0AD,/vmfs/devices/disks/naa.6005076309ffd4bd0000000000000111,SCSI controller 1,Hard disk 7,4,BOGPVBDWP0AE,Hard disk 7
+BOGPVBDWP0AD,/vmfs/devices/disks/naa.6005076309ffd4bd0000000000000122,SCSI controller 1,Hard disk 8,5,BOGPVBDWP0AE,Hard disk 8
+BOGPVBDWP0AD,/vmfs/devices/disks/naa.6005076309ffd4bd000000000000011e,SCSI controller 1,Hard disk 9,6,BOGPVBDWP0AE,Hard disk 9
+BOGPVBDWP0AD,/vmfs/devices/disks/naa.6005076309ffd4bd0000000000000123,SCSI controller 1,Hard disk 10,8,BOGPVBDWP0AE,Hard disk 10
+BOGPVBDWP0AD,/vmfs/devices/disks/naa.6005076309ffd4bd0000000000000106,SCSI controller 1,Hard disk 11,9,BOGPVBDWP0AE,Hard disk 11

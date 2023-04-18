@@ -33,10 +33,8 @@ $_this.ReconfigVM_Task($spec)
 
 $credentials = Get-Credential
 Connect-VIServer 172.18.40.30 -Credential $credentials
-$NodosPrimarios = "BOGPVBDWP009", "BOGPVBDWP011", "BOGPVPPWP014"
-$NodosSecundarios = "BOGPVBDWP010", "BOGPVBDWP012", "BOGPVPPWP015"
-#$NodosSecundarios = "BOGPVPPWP015"
-#$PowerCliContext = Get-PowerCLIContext
+$NodosPrimarios = "BOGPVBDWP009", "BOGPVBDWP011", "BOGPVBDWP0AD"
+$NodosSecundarios = "BOGPVBDWP010", "BOGPVBDWP012", "BOGPVBDWP0AE"
 $nodos = $NodosPrimarios + $NodosSecundarios
 $BusNumbers = @()
 for ($i=0; $i -lt $nodos.Length; $i++) {

@@ -11,23 +11,26 @@ function Mount-DataStore($IdLun, $StorageID) {
 
 $credentials = Get-Credential
 Connect-VIServer 172.18.40.30 -Credential $credentials
-$Luns =  "/vmfs/devices/disks/naa.6005076309ffd4bd0000000000002e18:1" , "/vmfs/devices/disks/naa.6005076309ffd4bd0000000000003000:1", "/vmfs/devices/disks/naa.6005076309ffd4bd0000000000002e15:1"
+$Luns =  "/vmfs/devices/disks/naa.6005076309ffd4bd0000000000002e18:1" , "/vmfs/devices/disks/naa.6005076309ffd4bd0000000000003000:1", "/vmfs/devices/disks/naa.6005076309ffd4bd0000000000002e15:1", "/vmfs/devices/disks/naa.6005076309ffd4bd0000000000002308:1"
 $HostStorageID = 'HostDatastoreSystem-datastoreSystem-1174155' , 'HostDatastoreSystem-datastoreSystem-16' , 'HostDatastoreSystem-datastoreSystem-1165894'
-$VMs= Import-CSV D:\Mount.csv
+$VMs= Import-CSV .\Mount.csv
 Get-Cluster -Name ITX-MED-CLUSTER1 | Get-VMHost | Get-VMHostStorage -RescanAllHba
 
 $i = 0
 $luns | ForEach-Object {
     Mount-Datastore $_ $HostStorageID[$i]
     $i= $i + 1
+    if ($i -eq 3){
+        $i = 0
+    }
 }
 
-Start-Sleep -Seconds 60
+Start-Sleep -Seconds 70
 
 get-Datastore -name *Datastore_16_DS8886_V81* | Set-Datastore -name Datastore_16_DS8886_V81 | Move-Datastore -Destination "FNA"
 get-Datastore -name *Datastore_01_DS8886_K51* | Set-Datastore -name Datastore_01_DS8886_K51 | Move-Datastore -Destination "FNA"
 get-Datastore -name *Datastore_15_DS8886_V81* | Set-Datastore -name Datastore_15_DS8886_V81 | Move-Datastore -Destination "FNA"
-
+get-Datastore -name *Datastore_09_DS8886_V81* | Set-Datastore -name Datastore_09_DS8886_V81 | Move-Datastore -Destination "FNA"
 $VMs | ForEach-Object {
    
     New-VM -name $_.Name -VMFilePath $_.Path -Location "Replica HW" -RunAsync -ResourcePool "ITX-MED-CLUSTER1" -Confirm:$false

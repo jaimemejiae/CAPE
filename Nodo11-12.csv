@@ -1,0 +1,18 @@
+﻿Name,LUN,SCSIController,HDName,DeviceNode,Nodo2,HDNameNodo2
+BOGPVBDWP011,/vmfs/devices/disks/naa.6005076309ffd4bd0000000000002355,SCSI controller 1,Hard disk 3,0,BOGPVBDWP012,Hard disk 2
+BOGPVBDWP011,/vmfs/devices/disks/naa.6005076309ffd4bd0000000000002354,SCSI controller 1,Hard disk 4,1,BOGPVBDWP012,Hard disk 3
+BOGPVBDWP011,/vmfs/devices/disks/naa.6005076309ffd4bd0000000000002356,SCSI controller 1,Hard disk 5,10,BOGPVBDWP012,Hard disk 4
+BOGPVBDWP011,/vmfs/devices/disks/naa.6005076309ffd4bd000000000000224f,SCSI controller 1,Hard disk 6,11,BOGPVBDWP012,Hard disk 5
+BOGPVBDWP011,/vmfs/devices/disks/naa.6005076309ffd4bd0000000000002250,SCSI controller 1,Hard disk 7,12,BOGPVBDWP012,Hard disk 6
+BOGPVBDWP011,/vmfs/devices/disks/naa.6005076309ffd4bd0000000000002251,SCSI controller 1,Hard disk 8,13,BOGPVBDWP012,Hard disk 7
+BOGPVBDWP011,/vmfs/devices/disks/naa.6005076309ffd4bd0000000000002252,SCSI controller 1,Hard disk 9,14,BOGPVBDWP012,Hard disk 8
+BOGPVBDWP011,/vmfs/devices/disks/naa.6005076309ffd4bd0000000000002357,SCSI controller 1,Hard disk 10,15,BOGPVBDWP012,Hard disk 9
+BOGPVBDWP011,/vmfs/devices/disks/naa.6005076309ffd4bd0000000000002358,SCSI controller 2,Hard disk 11,0,BOGPVBDWP012,Hard disk 10
+BOGPVBDWP011,/vmfs/devices/disks/naa.6005076309ffd4bd0000000000002359,SCSI controller 2,Hard disk 12,1,BOGPVBDWP012,Hard disk 11
+BOGPVBDWP011,/vmfs/devices/disks/naa.6005076309ffd4bd000000000000235c,SCSI controller 2,Hard disk 13,2,BOGPVBDWP012,Hard disk 12
+BOGPVBDWP011,/vmfs/devices/disks/naa.6005076309ffd4bd000000000000235a,SCSI controller 2,Hard disk 14,3,BOGPVBDWP012,Hard disk 13
+BOGPVBDWP011,/vmfs/devices/disks/naa.6005076309ffd4bd0000000000002360,SCSI controller 2,Hard disk 15,4,BOGPVBDWP012,Hard disk 14
+BOGPVBDWP011,/vmfs/devices/disks/naa.6005076309ffd4bd000000000000235b,SCSI controller 2,Hard disk 16,5,BOGPVBDWP012,Hard disk 15
+BOGPVBDWP011,/vmfs/devices/disks/naa.6005076309ffd4bd000000000000235d,SCSI controller 2,Hard disk 17,6,BOGPVBDWP012,Hard disk 16
+BOGPVBDWP011,/vmfs/devices/disks/naa.6005076309ffd4bd000000000000235e,SCSI controller 2,Hard disk 18,8,BOGPVBDWP012,Hard disk 17
+BOGPVBDWP011,/vmfs/devices/disks/naa.6005076309ffd4bd000000000000235f,SCSI controller 2,Hard disk 19,9,BOGPVBDWP012,Hard disk 18
