@@ -14,7 +14,6 @@
   $_this.ReconfigVM_Task($spec)
  
 }
-
 function Remove-Disk ($disksdelete, $VM) {
 
 $disksdelete| ForEach-Object{
