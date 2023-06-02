@@ -27,9 +27,9 @@ $luns | ForEach-Object {
 
 Start-Sleep -Seconds 70
 
-get-Datastore -name *Datastore_16_DS8886_V81* | Set-Datastore -name Datastore_16_DS8886_V81 | Move-Datastore -Destination "FNA"
-get-Datastore -name *Datastore_01_DS8886_K51* | Set-Datastore -name Datastore_01_DS8886_K51 | Move-Datastore -Destination "FNA"
-get-Datastore -name *Datastore_15_DS8886_V81* | Set-Datastore -name Datastore_15_DS8886_V81 | Move-Datastore -Destination "FNA"
+get-Datastore -name *Datastore_16_DS8886_V81* | Set-Datastore -name Datastore_16_DS8886_V81 | Move-Datastore -Destination "FNA" 
+get-Datastore -name *Datastore_01_DS8886_K51* | Set-Datastore -name Datastore_01_DS8886_K51 | Move-Datastore -Destination "FNA" 
+get-Datastore -name *Datastore_15_DS8886_V81* | Set-Datastore -name Datastore_15_DS8886_V81 | Move-Datastore -Destination "FNA" 
 get-Datastore -name *Datastore_09_DS8886_V81* | Set-Datastore -name Datastore_09_DS8886_V81 | Move-Datastore -Destination "FNA"
 $VMs | ForEach-Object {
    
