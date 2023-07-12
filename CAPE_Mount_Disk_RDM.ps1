@@ -28,7 +28,7 @@ function Set-MultiwriterDeviceNode ($vmToUpdate, $HDNameUpdate, $DeviceNodeUpdat
 	Set-MultiwriterDeviceNode $_.name $_.HDName $_.devicenode
 	Set-MultiwriterDeviceNode $_.Nodo2 $_.HDNameNodo2 $_.devicenode
 	}
-# prueba
+	
 	Disconnect-VIServer -Confirm:$false
 
 
