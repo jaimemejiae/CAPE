@@ -25,16 +25,17 @@ $luns | ForEach-Object {
     }
 }
 
-Start-Sleep -Seconds 90
+Start-Sleep -Seconds 150
 
-get-Datastore -name *Datastore_16_DS8886_V81* | Set-Datastore -name Datastore_16_DS8886_V81 | Move-Datastore -Destination "FNA"
-get-Datastore -name *Datastore_01_DS8886_K51* | Set-Datastore -name Datastore_01_DS8886_K51 | Move-Datastore -Destination "FNA" 
-get-Datastore -name *Datastore_15_DS8886_V81* | Set-Datastore -name Datastore_15_DS8886_V81 | Move-Datastore -Destination "FNA" 
-get-Datastore -name *Datastore_09_DS8886_V81* | Set-Datastore -name Datastore_09_DS8886_V81 | Move-Datastore -Destination "FNA"
+get-Datastore -name *Datastore_16_DS8886_V81* | Move-Datastore -Destination "FNA" | Set-Datastore -name Datastore_16_DS8886_V81
+get-Datastore -name *Datastore_01_DS8886_K51* | Move-Datastore -Destination "FNA" | Set-Datastore -name Datastore_01_DS8886_K51
+get-Datastore -name *Datastore_15_DS8886_V81* | Move-Datastore -Destination "FNA" | Set-Datastore -name Datastore_15_DS8886_V81
+get-Datastore -name *Datastore_09_DS8886_V81* | Move-Datastore -Destination "FNA" | Set-Datastore -name Datastore_09_DS8886_V81
+
 $VMs | ForEach-Object {
    
     New-VM -name $_.Name -VMFilePath $_.Path -Location "Replica HW" -RunAsync -ResourcePool "ITX-MED-CLUSTER1" -Confirm:$false
-    Start-Sleep -Seconds 2
+    Start-Sleep -Seconds 4
     Get-CDDrive -VM $_.Name | Remove-CDDrive -Confirm:$false
     $NetAdapters = Get-NetworkAdapter -VM $_.Name
 
